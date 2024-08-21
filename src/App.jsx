@@ -10,10 +10,14 @@ function App() {
   return (
     <>
       <header>Ready To Go</header>
-      <main>
+      <main className="container">
         <section>
-          <div style={{ backgroundColor: switch1 ? "purple" : "black" }}>
+          <div>
             <button
+              style={{
+                backgroundColor: switch1 ? "purple" : "white",
+                color: switch1 ? "white" : "purple",
+              }}
               onClick={() => {
                 setSwitch1(true);
               }}
@@ -21,8 +25,12 @@ function App() {
               On
             </button>
           </div>
-          <div style={{ backgroundColor: !switch1 ? "purple" : "black" }}>
+          <div>
             <button
+              style={{
+                backgroundColor: !switch1 ? "purple" : "white",
+                color: !switch1 ? "white" : "purple",
+              }}
               onClick={() => {
                 setSwitch1(false);
               }}
