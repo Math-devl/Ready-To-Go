@@ -12,11 +12,23 @@ function App() {
       <header>Ready To Go</header>
       <main>
         <section>
-          <div style={{ color: switch1 ? "purple" : "black" }}>
-            <button onClick={setSwitch1(switch1)}>On</button>
+          <div style={{ backgroundColor: switch1 ? "purple" : "black" }}>
+            <button
+              onClick={() => {
+                setSwitch1(true);
+              }}
+            >
+              On
+            </button>
           </div>
-          <div>
-            <button>Off</button>
+          <div style={{ backgroundColor: !switch1 ? "purple" : "black" }}>
+            <button
+              onClick={() => {
+                setSwitch1(false);
+              }}
+            >
+              Off
+            </button>
           </div>
         </section>
         <section>
